@@ -12,6 +12,74 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <section>
+<button type="button" class="btn btn-primary" id="modalbtn" data-toggle="modal" data-target=".bs-example-modal-lg">Sign in!</button>
+
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div>
+      <h2 id="authmessage"></h2>
+      </div>
+        <div class="form-group" id="togglesu">
+          <form id="sign-up" class="border">
+            <fieldset>
+              <legend>Sign up!</legend>
+              <input type="text" name="credentials[email]" placeholder="Email">
+              <input type="password" name="credentials[password]" placeholder="Password">
+              <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+              <input type="submit" value="Sign up!">
+            </fieldset>
+
+          </form>
+        </div>
+          <div class="form-group" id="togglesi">
+
+            <form id="sign-in" class="border">
+              <fieldset>
+                <legend>Sign in!</legend>
+                <input type="text" name="credentials[email]" placeholder="Email">
+                <input type="password" name="credentials[password]" placeholder="Password">
+                <input type="submit" value="Sign in!">
+              </fieldset>
+
+            </form>
+
+          </div>
+          <div class="form-group hidden" id="togglecp">
+
+            <form id="change-password" class="border">
+              <fieldset>
+                <legend>Change Password!</legend>
+                <input type="password" name="passwords[old]" placeholder="Old Password">
+                <input type="password" name="passwords[new]" placeholder="New Password">
+                <input type="submit" value="Change Password!">
+              </fieldset>
+
+            </form>
+
+          </div>
+          <div class="form-group hidden" id="toggleso">
+
+            <form id="sign-out" class="border">
+              <fieldset>
+                <input type="submit" value="Sign Out">
+              </fieldset>
+            </form>
+          </div>
+          <div class="hidden" id="apibuttons">
+            <button type="button" name="button" id="allsongs">Get all songs</button>
+            <button type="button" name="button" id="hidesongs">Hide songs</button>
+          </div>
+          <div class="hidden" id="songlist"></div>
+        </div>
+      </div>
+      </div>
+    <!-- modal top code end -->
+
+
+
+    <!-- end of auth -->
+  </section>
     </body>
 </html>

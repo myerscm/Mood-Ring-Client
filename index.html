@@ -25,9 +25,9 @@
           <form id="sign-up" class="border">
             <fieldset>
               <legend>Sign up!</legend>
-              <input type="text" name="credentials[email]" placeholder="Email">
-              <input type="password" name="credentials[password]" placeholder="Password">
-              <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+              <input required type="text" name="credentials[email]" placeholder="Email">
+              <input required type="password" name="credentials[password]" placeholder="Password">
+              <input required type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
               <input type="submit" value="Sign up!">
             </fieldset>
 
@@ -38,8 +38,8 @@
             <form id="sign-in" class="border">
               <fieldset>
                 <legend>Sign in!</legend>
-                <input type="text" name="credentials[email]" placeholder="Email">
-                <input type="password" name="credentials[password]" placeholder="Password">
+                <input required type="text" name="credentials[email]" placeholder="Email">
+                <input required type="password" name="credentials[password]" placeholder="Password">
                 <input type="submit" value="Sign in!">
               </fieldset>
 
@@ -51,8 +51,8 @@
             <form id="change-password" class="border">
               <fieldset>
                 <legend>Change Password!</legend>
-                <input type="password" name="passwords[old]" placeholder="Old Password">
-                <input type="password" name="passwords[new]" placeholder="New Password">
+                <input required type="password" name="passwords[old]" placeholder="Old Password">
+                <input required type="password" name="passwords[new]" placeholder="New Password">
                 <input type="submit" value="Change Password!">
               </fieldset>
 
@@ -93,9 +93,9 @@
       <form class="border" id="createforms">
         <fieldset>
           <legend>Add a new song!</legend>
-          <input type="text" name="song[title]" placeholder="Song Title">
-          <input type="text" name="song[artist]" placeholder="Song Artist">
-          <input type="text" name="song[mood]" placeholder="Song's Mood">
+          <input required type="text" name="song[title]" placeholder="Song Title">
+          <input required type="text" name="song[artist]" placeholder="Song Artist">
+          <input required type="text" name="song[mood]" placeholder="Song's Mood">
           <input type="submit" value="Add this song!">
           <button type="button" name="button" id="hidecreate">Close</button>
         </fieldset>
@@ -106,7 +106,7 @@
       <form class="border" id="removeforms">
         <fieldset>
           <legend>Remove a song</legend>
-          <input type="number" name="song[id]" placeholder="Song ID">
+          <input required type="number" name="song[id]" placeholder="Song ID">
           <input type="submit" value="Remove song">
           <button type="button" name="button" id="hidedestroy">Close</button>
         </fieldset>
@@ -118,10 +118,10 @@
       <form class="border" id="updateforms">
         <fieldset>
           <legend>Change a song</legend>
-          <input type="number" name="song[id]" placeholder="Song ID">
-          <input type="text" name="song[title]" placeholder="New Song Title">
-          <input type="text" name="song[artist]" placeholder="New Song Artist">
-          <input type="text" name="song[mood]" placeholder="New Song Mood">
+          <input required type="number" name="song[id]" placeholder="Song ID">
+          <input required type="text" name="song[title]" placeholder="New Song Title">
+          <input required type="text" name="song[artist]" placeholder="New Song Artist">
+          <input required type="text" name="song[mood]" placeholder="New Song Mood">
           <input type="submit" value="Change this song">
           <button type="button" name="button" id="hideupdate">Close</button>
         </fieldset>

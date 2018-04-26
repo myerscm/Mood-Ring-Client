@@ -1,10 +1,11 @@
 'use strict'
 
 const onMySongsSuccess = function (data) {
+  console.log(data)
   // clear content div, in case something was already there
   $('#songlist').html('')
 
-  data.user.songs.forEach(song => {
+  data.songs.forEach(song => {
     const songHTML = (`
       <h4>Title: ${song.title}</h4>
       <p>Artist: ${song.artist}</p>
@@ -15,7 +16,7 @@ const onMySongsSuccess = function (data) {
 
     $('#songlist').append(songHTML)
   })
-  if (data.user.songs.length === 0) {
+  if (data.songs.length === 0) {
     $('#hidesongs').addClass('hidden')
     $('#apimessage').html('You have no songs! Go add some!')
     $('#apimessage').css('background-color', 'red')
@@ -56,9 +57,19 @@ const onUpdateSongSuccess = function (data) {
   $('form').trigger('reset')
 }
 
+const onError = function (data) {
+  $('#apimessage').html('That song does not exist')
+  $('#apimessage').css('background-color', 'red')
+  setTimeout(() => {
+    $('#apimessage').html('')
+  }, 4000
+  )
+}
+
 module.exports = {
   onMySongsSuccess,
   onCreateSongSuccess,
   onDeleteSongSuccess,
-  onUpdateSongSuccess
+  onUpdateSongSuccess,
+  onError
 }

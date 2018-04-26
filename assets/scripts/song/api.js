@@ -4,7 +4,7 @@ const store = require('../store')
 
 const getMySongs = function (data) {
   return $.ajax({
-    url: config.apiUrl + '/users/' + store.user.id,
+    url: config.apiUrl + '/songs/',
     method: 'GET',
     headers: {
       contentType: 'application/json',

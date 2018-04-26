@@ -26,6 +26,7 @@ const onDeleteSong = function (event) {
   api.destroySong(songId.song.id)
     .then(ui.onDeleteSongSuccess)
     .then(() => onGetSongs(event))
+    .catch(ui.onError)
 }
 
 const onUpdateSong = function (event) {
@@ -34,6 +35,8 @@ const onUpdateSong = function (event) {
   api.updateSong(data)
     .then(ui.onUpdateSongSuccess)
     .then(() => onGetSongs(event))
+    .catch(ui.onError)
+
 }
 
 const hideSongs = function () {

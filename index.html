@@ -12,7 +12,7 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <section>
+      <nav class="navbar navbar-default">
 <button type="button" class="btn btn-primary" id="modalbtn" data-toggle="modal" data-target=".bs-example-modal-lg">Sign in!</button>
 
 <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
@@ -67,19 +67,70 @@
               </fieldset>
             </form>
           </div>
-          <div class="hidden" id="apibuttons">
-            <button type="button" name="button" id="allsongs">Get all songs</button>
-            <button type="button" name="button" id="hidesongs">Hide songs</button>
-          </div>
-          <div class="hidden" id="songlist"></div>
-        </div>
       </div>
       </div>
+    </div>
     <!-- modal top code end -->
 
 
 
     <!-- end of auth -->
+  </nav>
+  <section>
+    <div>
+    <h2 id="apimessage"></h2>
+    </div>
+    <div class="hidden" id="apibuttons">
+      <button type="button" name="button" id="mysongs">My Songs</button>
+      <button class="hidden" type="button" name="button" id="hidesongs">Hide songs</button>
+      <button type="button" name="button" id="addsongs">Add a Song</button>
+      <button type="button" name="button" id="destroysongs">Remove a Song</button>
+      <button type="button" name="button" id="updatesongs">Change a Song</button>
+    </div>
+
+    <div class="hidden" id="songlist"></div>
+    <div class="form-group hidden" id="createsongs">
+      <form class="border" id="createforms">
+        <fieldset>
+          <legend>Add a new song!</legend>
+          <input type="text" name="song[title]" placeholder="Song Title">
+          <input type="text" name="song[artist]" placeholder="Song Artist">
+          <input type="text" name="song[mood]" placeholder="Song's Mood">
+          <input type="submit" value="Add this song!">
+          <button type="button" name="button" id="hidecreate">Close</button>
+        </fieldset>
+      </form>
+    </div>
+
+    <div class="form-group hidden" id="removesongs">
+      <form class="border" id="removeforms">
+        <fieldset>
+          <legend>Remove a song</legend>
+          <input type="number" name="song[id]" placeholder="Song ID">
+          <input type="submit" value="Remove song">
+          <button type="button" name="button" id="hidedestroy">Close</button>
+        </fieldset>
+
+      </form>
+    </div>
+
+    <div class="form-group hidden" id="update">
+      <form class="border" id="updateforms">
+        <fieldset>
+          <legend>Change a song</legend>
+          <input type="number" name="song[id]" placeholder="Song ID">
+          <input type="text" name="song[title]" placeholder="New Song Title">
+          <input type="text" name="song[artist]" placeholder="New Song Artist">
+          <input type="text" name="song[mood]" placeholder="New Song Mood">
+          <input type="submit" value="Change this song">
+          <button type="button" name="button" id="hideupdate">Close</button>
+        </fieldset>
+
+      </form>
+    </div>
+
+
+
   </section>
     </body>
 </html>

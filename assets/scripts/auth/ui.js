@@ -72,7 +72,11 @@ const signOutSuccess = function () {
   $('#togglecp').addClass('hidden')
   $('#toggleso').addClass('hidden')
   $('#apibuttons').addClass('hidden')
-  $('#usercontent').addClass('hidden')
+  $('#songlist').addClass('hidden')
+  $('#hidesongs').addClass('hidden')
+  $('#createsongs').addClass('hidden')
+  $('#update').addClass('hidden')
+  $('#removesongs').addClass('hidden')
   $('#modalbtn').text('Sign in!')
   store.user = null
 }

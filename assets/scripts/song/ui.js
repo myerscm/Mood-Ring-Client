@@ -15,6 +15,14 @@ const onMySongsSuccess = function (data) {
 
     $('#songlist').append(songHTML)
   })
+  if (data.user.songs.length === 0) {
+    $('#apimessage').html('You have no songs! Go add some!')
+    $('#apimessage').css('background-color', 'red')
+    setTimeout(() => {
+      $('#apimessage').html('')
+    }, 6000
+    )
+  }
 }
 
 const onCreateSongSuccess = function (data) {

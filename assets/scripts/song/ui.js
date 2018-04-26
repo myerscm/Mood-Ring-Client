@@ -16,6 +16,7 @@ const onMySongsSuccess = function (data) {
     $('#songlist').append(songHTML)
   })
   if (data.user.songs.length === 0) {
+    $('#hidesongs').addClass('hidden')
     $('#apimessage').html('You have no songs! Go add some!')
     $('#apimessage').css('background-color', 'red')
     setTimeout(() => {

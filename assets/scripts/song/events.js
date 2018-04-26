@@ -25,6 +25,7 @@ const onDeleteSong = function (event) {
   console.log(songId)
   api.destroySong(songId.song.id)
     .then(ui.onDeleteSongSuccess)
+    .then(() => onGetSongs(event))
 }
 
 const onUpdateSong = function (event) {
@@ -32,6 +33,7 @@ const onUpdateSong = function (event) {
   const data = getFormFields(event.target)
   api.updateSong(data)
     .then(ui.onUpdateSongSuccess)
+    .then(() => onGetSongs(event))
 }
 
 const hideSongs = function () {

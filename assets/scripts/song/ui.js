@@ -1,7 +1,6 @@
 'use strict'
 
 const onMySongsSuccess = function (data) {
-  console.log(data)
   // clear content div, in case something was already there
   $('#songlist').html('')
 

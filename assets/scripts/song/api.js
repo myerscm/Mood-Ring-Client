@@ -25,7 +25,6 @@ const createSong = function (data) {
   })
 }
 const updateSong = function (data) {
-  console.log(data)
   return $.ajax({
     url: config.apiUrl + '/songs/' + data.song.id,
     method: 'PATCH',

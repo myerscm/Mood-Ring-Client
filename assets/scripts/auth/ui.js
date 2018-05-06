@@ -1,7 +1,6 @@
 'use strict'
 const store = require('../store')
 const signUpSuccess = function () {
-  console.log('sign up is working')
   $('#authmessage').html('Successfully signed up! Sign in to continue')
   $('#authmessage').css('background-color', 'green')
   setTimeout(() => {
@@ -34,6 +33,7 @@ const signUpFailure = function () {
     $('#authmessage').html('')
   }, 3000
   )
+  $('form').trigger('reset')
 }
 const signInFailure = function () {
   $('#authmessage').html('Failure signing in')
@@ -42,6 +42,7 @@ const signInFailure = function () {
     $('#authmessage').html('')
   }, 3000
   )
+  $('form').trigger('reset')
 }
 const changePasswordSuccess = function () {
   $('#authmessage').html('Successfully changed password')
@@ -59,6 +60,7 @@ const changePasswordFailure = function () {
     $('#authmessage').html('')
   }, 3000
   )
+  $('form').trigger('reset')
 }
 const signOutSuccess = function () {
   $('#authmessage').html('Successfully signed out')

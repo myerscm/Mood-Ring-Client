@@ -87,6 +87,6 @@ const addHandlers = function () {
   $('#hideupdate').on('click', hideUpdate)
 }
 
-module.exports = {
+module.exports= {
   addHandlers
 }

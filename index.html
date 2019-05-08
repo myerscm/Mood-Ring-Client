@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Example</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+      <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Gaegu" rel="stylesheet">
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <nav class="navbar navbar-default">
+<button type="button" class="btn btn-primary" id="modalbtn" data-toggle="modal" data-target=".bs-example-modal-lg">Sign in!</button>
+
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div>
+      <h2 id="authmessage"></h2>
+      </div>
+        <div class="form-group" id="togglesu">
+          <form id="sign-up" class="border">
+            <fieldset>
+              <legend>Sign up!</legend>
+              <input required type="text" name="credentials[email]" placeholder="Email">
+              <input required type="password" name="credentials[password]" placeholder="Password">
+              <input required type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+              <input type="submit" value="Sign up!">
+            </fieldset>
+
+          </form>
+        </div>
+          <div class="form-group" id="togglesi">
+
+            <form id="sign-in" class="border">
+              <fieldset>
+                <legend>Sign in!</legend>
+                <input required type="text" name="credentials[email]" placeholder="Email">
+                <input required type="password" name="credentials[password]" placeholder="Password">
+                <input type="submit" value="Sign in!">
+              </fieldset>
+
+            </form>
+
+          </div>
+          <div class="form-group hidden" id="togglecp">
+
+            <form id="change-password" class="border">
+              <fieldset>
+                <legend>Change Password!</legend>
+                <input required type="password" name="passwords[old]" placeholder="Old Password">
+                <input required type="password" name="passwords[new]" placeholder="New Password">
+                <input type="submit" value="Change Password!">
+              </fieldset>
+
+            </form>
+
+          </div>
+          <div class="form-group hidden" id="toggleso">
+
+            <form id="sign-out" class="border">
+              <fieldset>
+                <input type="submit" value="Sign Out">
+              </fieldset>
+            </form>
+          </div>
+      </div>
+      </div>
+    </div>
+    <!-- modal top code end -->
+
+
+
+    <!-- end of auth -->
+  </nav>
+  <h1> MOOD RING </h1>
+  <h2 id="landingh2">Create an account and keep a list of the songs that YOU love</h2>
+  <h3>This website was created as an excercise in creating a RESTful Rails API and is a work in progress. Check back for updates later! </h3>
+  <section>
+    <div>
+    <h2 id="apimessage"></h2>
+    </div>
+    <div class="hidden" id="apibuttons">
+      <button type="button" name="button" id="mysongs">My Songs</button>
+      <button class="hidden" type="button" name="button" id="hidesongs">Hide songs</button>
+      <button type="button" name="button" id="addsongs">Add a Song</button>
+      <button type="button" name="button" id="destroysongs">Remove a Song</button>
+      <button type="button" name="button" id="updatesongs">Change a Song</button>
+    </div>
+
+    <div class="hidden" id="songlist"></div>
+    <div class="form-group hidden" id="createsongs">
+      <form class="border" id="createforms">
+        <fieldset>
+          <legend>Add a new song!</legend>
+          <input required type="text" name="song[title]" placeholder="Song Title">
+          <input required type="text" name="song[artist]" placeholder="Song Artist">
+          <input required type="text" name="song[mood]" placeholder="Song's Mood">
+          <input type="submit" value="Add this song!">
+          <button type="button" name="button" id="hidecreate">Close</button>
+        </fieldset>
+      </form>
+    </div>
+
+    <div class="form-group hidden" id="removesongs">
+      <form class="border" id="removeforms">
+        <fieldset>
+          <legend>Remove a song</legend>
+          <input required type="number" name="song[id]" placeholder="Song ID">
+          <input type="submit" value="Remove song">
+          <button type="button" name="button" id="hidedestroy">Close</button>
+        </fieldset>
+
+      </form>
+    </div>
+
+    <div class="form-group hidden" id="update">
+      <form class="border" id="updateforms">
+        <fieldset>
+          <legend>Change a song</legend>
+          <input required type="number" name="song[id]" placeholder="Song ID">
+          <input required type="text" name="song[title]" placeholder="New Song Title">
+          <input required type="text" name="song[artist]" placeholder="New Song Artist">
+          <input required type="text" name="song[mood]" placeholder="New Song Mood">
+          <input type="submit" value="Change this song">
+          <button type="button" name="button" id="hideupdate">Close</button>
+        </fieldset>
+
+      </form>
+    </div>
+
+
+
+  </section>
+    </body>
+</html>
